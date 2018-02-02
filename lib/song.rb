@@ -66,6 +66,7 @@ class Song
 
     parts = []
     parts = file.split(" - ")
+    binding.pry
     artist_string, song, genre_string = parts[0], parts[1], parts[2].gsub(".mp3", "")
 
     artist = Artist.find_or_create_by_name(artist_string)
