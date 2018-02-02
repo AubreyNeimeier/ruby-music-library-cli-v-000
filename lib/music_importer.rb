@@ -12,13 +12,14 @@ class MusicImporter
        file_names = Dir.glob("#{path}/*.mp3")
          file_names.each do |song|
            song.gsub!(/\.\W\w+\W\w+\W\w+\W/, "")
+           binding.pry
            file_names_correct << song
          end
        file_names_correct
   end
 
   def import
-    binding.pry
+
     files.each do |file|
       Song.create_from_filename(file)
     end
