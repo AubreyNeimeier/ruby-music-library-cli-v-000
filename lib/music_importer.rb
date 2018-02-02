@@ -12,7 +12,7 @@ class MusicImporter
        file_names = Dir.glob("#{path}/*.mp3")
          file_names.each do |song|
            #song.gsub!(/\.\W\w+\W\w+\W\w+\W/, "")
-           song.gsub!(path, "")
+           song.gsub!("#{path}/", "")
            binding.pry
            file_names_correct << song
          end
