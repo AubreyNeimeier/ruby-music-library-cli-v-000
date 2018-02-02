@@ -55,7 +55,7 @@ class Song
 
   def self.new_from_filename(file)
     binding.pry
-    parts = file.split(" - ")
+    parts << file.split(" - ")
     song = parts[1]
     artist_string = parts[0]
     genre_string = parts[2].gsub(".mp3", "")
