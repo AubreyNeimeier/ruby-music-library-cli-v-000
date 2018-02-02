@@ -1,5 +1,5 @@
 #require_relative "./concerns/findable.rb"
-#when you use pry, use it in the environment where the error is coming up. 
+#when you use pry, use it in the environment where the error is coming up.
 #tests were passing so don't run tests with pry
 #run pry through the development environment (where error is occuring)
 require 'pry'
