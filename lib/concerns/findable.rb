@@ -2,7 +2,7 @@ module Concerns
   module Findable
 
   def find_by_name(name)
-    self.all.find {|x| x.name == name}
+    all.detect {|x| x.name == name}
     #this is a class method (we call it with extend)so self IS the class.
     #this reads as Song.all or Artist.all
   end
