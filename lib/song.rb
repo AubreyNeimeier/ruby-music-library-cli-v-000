@@ -64,6 +64,7 @@ class Song
     #condensed could be written
 =end
     binding.pry
+    parts = []
     parts = file.split(" - ")
     artist_string, song, genre_string = parts[0], parts[1], parts[2].gsub(".mp3", "")
 
