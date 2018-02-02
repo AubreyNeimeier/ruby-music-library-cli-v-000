@@ -58,6 +58,8 @@ class Song
     song = parts[1]
     artist_string = parts[0]
     genre_string = parts[2].gsub(".mp3", "")
+    #condensed could be written 
+    artist_name, song_name, genre_name = parts[0], parts[1], parts[2].gsub(".mp3", "")
 
     artist = Artist.find_or_create_by_name(artist_string)
     genre = Genre.find_or_create_by_name(genre_string)
