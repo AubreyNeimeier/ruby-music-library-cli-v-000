@@ -63,14 +63,14 @@ class Song
     genre_string = parts[2].gsub(".mp3", "")
     #condensed could be written
 =end
-    binding.pry
+    
     parts = []
     parts = file.split(" - ")
     artist_string, song, genre_string = parts[0], parts[1], parts[2].gsub(".mp3", "")
 
     artist = Artist.find_or_create_by_name(artist_string)
     genre = Genre.find_or_create_by_name(genre_string)
-
+    binding.pry
     new(song, artist, genre)
 
   end
